@@ -191,8 +191,10 @@ body {
   width: 89%;
   top: 5.5%;
   left: 11.5%;
-  background-color: #f00;
+  background-color: #000;
   border-radius: 0 0 0 0;
+  font-size: 18px;
+  color: yellow;
 }
 
 
