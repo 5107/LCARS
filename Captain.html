@@ -166,11 +166,22 @@ body {
   background-color: #99C;
 }
 
-#tray1b {
+.tray1b {
+  position: fixed;
+  background-color: #f00;
   height: 7%;
   width: 10%;
   left: 0.5%;
   top: 21%;
+}
+
+.tray2b {
+  position: fixed;
+  background-color: yellow;
+  height: 7%;
+  width: 11%;
+  left: 0.5%;
+  top: 28.5%;
 }
 
 #sidecurve {
@@ -196,7 +207,16 @@ body {
 }
 </style>
 <script>
-
+var Chirp = new Audio();
+Chirp.src = "Chirp.mp3";
+function PlayChirp() {
+    Chirp.play();
+}
+var RED_ALERT = new Audio();
+RED_ALERT.src = "RED_ALERT.mp3";
+function PlayREDALERT() {
+    RED_ALERT.play();
+}
 </script>  
 </head>
 <body>
@@ -204,8 +224,14 @@ body {
 <div id="border-top"></div>
 <div id="text">Capt. v.d. Brink</div>
 <div id="closing-top"></div>
-<div id="tray1"><!--<button class="button" id="tray1b"><a href="page1">hello</a></button>--><div>
-<div id="tray2"><div>
+<div id="tray1">
+<audio id="RED_ALERT" src="RED_ALERT.mp3"></audio>
+<button class="tray1b" onclick="PlayREDALERT()"><b>RED_ALERT</b></button>
+<div>
+<div id="tray2">
+<audio id="Chirp" src="Chirp.mp3"></audio>
+<button class="tray2b" onclick="PlayChirp()"><b>HAILING</b></button>
+<div>
 <div id="tray3"><div>
 <div id="tray4"><div>
 <div id="tray5"><div>
